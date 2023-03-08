@@ -19,7 +19,8 @@ const posts = [
 ]
 
 app.get('/posts', authenticateToken, (req,res) => {
-    res.json(posts.filter(post => post.username === req.user.name))
+    res.json(posts)
+    //res.json(posts.filter(post => post.username === req.user.name))
 })
 
 app.post('/login', (req,res) => {
@@ -39,7 +40,7 @@ function authenticateToken(req,res,next){
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
         if (err) return res.sendStatus(403)
         req.user = user
-        next()          //so that we can move on from our middle ware
+        next()        //so that we can move on from our middle ware
     })
    
 }
