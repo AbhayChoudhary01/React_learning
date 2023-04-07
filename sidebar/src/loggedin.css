@@ -10,9 +10,12 @@ html, body {
 }
 
 .sidebar{
-    min-height: 200px;
+    min-height: 100%;
     border: 2px solid green;
-    width: 200px
+    width: 200px;
+    left: -20px;
+    background: white;
+    transition: 0.3s;
 }
 
 .content{
