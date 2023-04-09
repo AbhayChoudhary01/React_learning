@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Final from  './final'
-import Test from './test';
+import Modal from './modal'
 
+import App from './App';
+import Test from './test';
+import Final from './final';
+import Audio from "./audio";
+import "./audio.css"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-        {/* <Test />  */}
-        <Final/>
+        {/* <Test /> */}
+        
+        {/* <Modal /> */}
+        <Audio />
+        
+        {/* <App /> */}
     </>
 );
